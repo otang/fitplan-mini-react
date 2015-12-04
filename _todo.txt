@@ -1,10 +1,7 @@
 
 
-
-[x] add list of workouts page
-[x] add facebook login
-[x] remove livereaload from production branch
-
+[ ] progress bar
+[ ] only show back if > 1
 [ ] style list of workouts page
 [ ] style survey
 [ ] style thank you page

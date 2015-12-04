@@ -12,10 +12,10 @@ var Results = require('./Results.js');
 var App = React.createClass({
   getInitialState: function () {
     return {
-      // page: "questionnaire"
-      // page: "thank_you"
       user: null,
-      page: "thank_you"
+      page: "questionnaire"
+      // page: "thank_you"
+      // page: "thank_you"
     };
   },
 
