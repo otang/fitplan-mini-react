@@ -3,8 +3,8 @@
     "title": "Choose Your Gender",
     "type": "multiple_choice",
     "choices": [
-      {"title": "Male", "image": "/images/xxx.jpg"},
-      {"title": "Female", "image": "/images/xxx.jpg"}
+      {"title": "Male", "image": "http://artifacts.bbcomcdn.com/cms-app/1.2.2/i/7ad1f61566b532c742fc4f59fc99bdca25309815.jpg", "value": "male"},
+      {"title": "Female", "image": "http://artifacts.bbcomcdn.com/cms-app/1.2.2/i/7ad1f61566b532c742fc4f59fc99bdca25309815.jpg", "value": "female"}
     ]
   },
   {
@@ -19,9 +19,9 @@
     "title": "Choose Your Main Goal",
     "type": "multiple_choice",
     "choices": [
-      {"title": "Build Muscle", "image": "/images/xxx.jpg"},
-      {"title": "Lose Fat", "image": "/images/xxx.jpg"},
-      {"title": "Transform", "image": "/images/xxx.jpg"}
+      {"title": "Build Muscle", "image": "http://artifacts.bbcomcdn.com/cms-app/1.2.2/i/7ad1f61566b532c742fc4f59fc99bdca25309815.jpg", "value": "build_muscle"},
+      {"title": "Lose Fat", "image": "http://artifacts.bbcomcdn.com/cms-app/1.2.2/i/7ad1f61566b532c742fc4f59fc99bdca25309815.jpg", "value": "lose_fat"},
+      {"title": "Transform", "image": "http://artifacts.bbcomcdn.com/cms-app/1.2.2/i/7ad1f61566b532c742fc4f59fc99bdca25309815.jpg", "value": "transform"}
     ]
   },
   {

@@ -3,6 +3,7 @@ var Store = require('./Store.js');
 var actions = require('./actions.js');
 var MultipleChoiceQuestion = require('./MultipleChoiceQuestion.js');
 
+
 var App = React.createClass({
   getInitialState: function () {
     return {
@@ -40,17 +41,25 @@ var App = React.createClass({
   //     newMessage: event.target.value
   //   });
   // },
+
+
+  handleAnswerQuestion: function(answer) {
+    alert('App.js: answerQuestion: '+answer);
+    // console.log(answer);
+
+  },
+
   renderQuestion: function (question, index) {
     if(index !== this.state.currentQuestion) return;
     switch(question.type) {
       case "multiple_choice":
         return (
-          <MultipleChoiceQuestion key={index} question={question}></MultipleChoiceQuestion>
+          <MultipleChoiceQuestion key={index} onAnswerQuestion={this.handleAnswerQuestion} question={question}></MultipleChoiceQuestion>
         )
         break;
       default:
         return (
-          <div className="question" key={index}>{question.title}</div>
+          <div className="question" key={index} onAnswerQuestion={this.handleAnswerQuestion}>{question.title}</div>
         );
     }
   },
