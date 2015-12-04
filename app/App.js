@@ -1,12 +1,13 @@
 var React = require('react');
 var Store = require('./Store.js');
 var actions = require('./actions.js');
+var MultipleChoiceQuestion = require('./MultipleChoiceQuestion.js');
 
 var App = React.createClass({
   getInitialState: function () {
     return {
-      messages: Store.getMessages(),
-      newMessage: ''
+      questions: Store.getQuestions(),
+      answers: Store.getAnswers()
     };
   },
   componentWillMount: function () {
@@ -17,38 +18,54 @@ var App = React.createClass({
   },
   changeState: function () {
     this.setState({
-      messages: Store.getMessages()
+      questions: Store.getQuestions(),
+      answers: Store.getAnswers()
     });
   },
-  addMessage: function (event) {
-    event.preventDefault();
-    var input = this.refs.newMessage.getDOMNode();
-    actions.addMessage(input.value);
-    this.setState({
-      newMessage: ''
-    });
+
+
+
+  // addMessage: function (event) {
+  //   event.preventDefault();
+  //   var input = this.refs.newMessage.getDOMNode();
+  //   actions.addMessage(input.value);
+  //   this.setState({
+  //     newMessage: ''
+  //   });
+  // },
+  // updateNewMessage: function (event) {
+  //   this.setState({
+  //     newMessage: event.target.value
+  //   });
+  // },
+  renderQuestion: function (question) {
+    switch(question.type) {
+      case "multiple_choice":
+        return (
+          <MultipleChoiceQuestion question={question}></MultipleChoiceQuestion>
+        )
+        break;
+      default:
+        return (
+          <div className="question">{question.title}</div>
+        );
+    }
   },
-  updateNewMessage: function (event) {
-    this.setState({
-      newMessage: event.target.value
-    });
-  },
-  renderMessages: function (message) {
-    return (
-      <div>{message}</div>
-    );
-  },
+
+
 	render: function() {
 		return (
-			<div>
-        {this.state.messages.map(this.renderMessages)}
-        <form onSubmit={this.addMessage}>
-          <input ref="newMessage" type="text" value={this.state.newMessage} onChange={this.updateNewMessage}/>
-        </form>
+      <div id="questionnaire">
+        <div className="questions">
+          {this.state.questions.map(this.renderQuestion)}
+        </div>
       </div>
 		);
 	}
-	
+
 });
-	
+
+
+
+
 module.exports = App;

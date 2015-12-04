@@ -1,5 +1,8 @@
 var flux = require('flux-react');
 
 module.exports = flux.createActions([
-  'addMessage'
+  'answerQuestion',
+  'reset',
+  'previousQuestion',
+  'nextQuestion'
 ]);
