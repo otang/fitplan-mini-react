@@ -49,13 +49,11 @@ var Questionnaire = React.createClass({
     actions.answerQuestion(answer);
 
     if(this.state.currentQuestion >= this.state.questions.length - 1) {
-      // this.props.onComplete(this.state.answers);
-      Store.setPage('tanks');
-
+      // Questionnaire is complete
+      this.props.onComplete();
     } else {
       actions.nextQuestion();
     }
-
   },
 
   renderQuestion: function (question, index) {

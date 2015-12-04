@@ -4,43 +4,39 @@ var actions = require('./actions.js');
 
 
 var Questionnaire = require('./Questionnaire.js');
+var ThankYou = require('./ThankYou.js');
 
 
 
 var App = React.createClass({
   getInitialState: function () {
     return {
-      page: Store.getPage()
+      page: "questionnaire"
     };
   },
-  componentWillMount: function () {
-    Store.addChangeListener(this.changeState);
-  },
-  componentWillUnmount: function () {
-    Store.removeChangeListener(this.changeState);
-  },
-  changeState: function () {
-    this.setState({
-      page: Store.getPage()
-    });
+
+  handleSurveyComplete: function() {
+
+    console.log('thanks for completing the survey!');
+    console.log(Store.getAnswers());
+    this.setState({page: 'thank_you'});
   },
 
 	render: function() {
-    switch(Store.getPage()) {
+    switch(this.state.page) {
       case "questionnaire":
         return (
-          <Questionnaire></Questionnaire>
+          <Questionnaire onComplete={this.handleSurveyComplete}></Questionnaire>
         );
         break;
       default:
         return (
-          <h1>Thnkx</h1>
+          <ThankYou></ThankYou>
         );
     }
 	}
 
 });
-
 
 
 

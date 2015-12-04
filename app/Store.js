@@ -6,7 +6,7 @@ module.exports = flux.createStore({
   answers: [],
   currentQuestion: 0,
   questions: questions,
-  page: 'questionnaire',
+  // page: 'questionnaire',
 
   actions: [
     actions.answerQuestion,
@@ -44,12 +44,12 @@ module.exports = flux.createStore({
     getCurrentQuestion: function () {
       return this.currentQuestion;
     },
-    getPage: function() {
-      return this.page;
-    },
-    setPage: function(page) {
-      this.page = page;
-      this.emitChange();
-    }
+    // getPage: function() {
+    //   return this.page;
+    // },
+    // setPage: function(page) {
+    //   this.page = page;
+    //   this.emitChange();
+    // }
   }
 });
