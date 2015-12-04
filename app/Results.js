@@ -37,9 +37,10 @@ var Results = React.createClass({
   },
 
 	render: function() {
+    console.log(this.props.user);
     return (
       <div className="results">
-        <h1>Find your Fitplan</h1>
+        <h1>{this.props.user && this.props.user.name ? this.props.user.name+', ' : ''}Here's Your Fitplan</h1>
         <p>Complete fitness plans from the industry's best experts. Every plan includes workouts, nutrition information, supplement advice, and more. Whatever your goal, we've got your guide.</p>
 
 

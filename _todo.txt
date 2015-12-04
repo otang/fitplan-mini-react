@@ -2,11 +2,11 @@
 
 
 [x] add list of workouts page
-[ ] add facebook login
+[x] add facebook login
+[x] remove livereaload from production branch
 
 [ ] style list of workouts page
 [ ] style survey
 [ ] style thank you page
-[x] remove livereaload from production branch
 
 

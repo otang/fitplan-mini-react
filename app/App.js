@@ -14,6 +14,7 @@ var App = React.createClass({
     return {
       // page: "questionnaire"
       // page: "thank_you"
+      user: null,
       page: "thank_you"
     };
   },
@@ -25,6 +26,14 @@ var App = React.createClass({
     this.setState({page: 'thank_you'});
   },
 
+  facebookLoginComplete: function(user) {
+    this.setState({user: user});
+  },
+
+  proceedToResults: function() {
+    this.setState({page: 'results'});
+  },
+
 	render: function() {
     switch(this.state.page) {
       case "questionnaire":
@@ -34,12 +43,12 @@ var App = React.createClass({
         break;
       case "thank_you":
         return (
-          <ThankYou></ThankYou>
+          <ThankYou onLoginComplete={this.facebookLoginComplete} onProceedToResults={this.proceedToResults}></ThankYou>
         );
         break;
       case "results":
         return (
-          <Results></Results>
+          <Results user={this.state.user}></Results>
         );
         break;
       default:
