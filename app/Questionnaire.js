@@ -72,11 +72,16 @@ var Questionnaire = React.createClass({
     }
   },
 
+  handleClickBackButton: function(e) {
+    e.preventDefault();
+    actions.previousQuestion();
+  },
+
 
 	render: function() {
 		return (
       <div>
-        <ProgressBar></ProgressBar>
+        <ProgressBar currentQuestion={this.state.currentQuestion} totalQuestions={this.state.questions.length}></ProgressBar>
 
         <div className="questions">
           {this.state.questions.map(this.renderQuestion)}

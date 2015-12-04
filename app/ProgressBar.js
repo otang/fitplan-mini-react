@@ -5,13 +5,9 @@ var actions = require('./actions.js');
 
 var ProgressBar = React.createClass({
 
-
-
-
 	render: function() {
 		return (
-      <span>[============]</span>
-
+      <span>{this.props.currentQuestion+1} / {this.props.totalQuestions}</span>
 		);
 	}
 
