@@ -1,16 +1,31 @@
 
 var React = require('react');
 
+// import React from 'react';
+// import ReactDOM from 'react-dom';
+var FacebookLogin =  require('react-facebook-login');
+
+
 
 var ThankYou = React.createClass({
+
+  responseFacebook: function(response) {
+    //{id: "10153261461248870", birthday: "05/10/1986", email: "dr.greenwood@gmail.com", first_name: "Chris", gender: "male"…}
+    console.log('responseFacebook');
+    console.log(response);
+  },
 
 	render: function() {
     return (
       <div className="thankYou">
         <h1>You're done!</h1>
         <p>
-          <a href="#">Connect with Facebook</a> now to see your personalized results.
+          Login with Facebook now to view your recommended Fitplan.
         </p>
+        <FacebookLogin
+          appId="366102180203274"
+          autoLoad={true}
+          callback={this.responseFacebook} />
       </div>
     );
 	}

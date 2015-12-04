@@ -1,10 +1,10 @@
 
 
 
-[ ] add list of workouts page
-[ ] style list of workouts page
+[x] add list of workouts page
 [ ] add facebook login
 
+[ ] style list of workouts page
 [ ] style survey
 [ ] style thank you page
 

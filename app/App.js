@@ -14,7 +14,7 @@ var App = React.createClass({
     return {
       // page: "questionnaire"
       // page: "thank_you"
-      page: "results"
+      page: "thank_you"
     };
   },
 

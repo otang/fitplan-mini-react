@@ -25,6 +25,8 @@
   },
   "dependencies": {
     "flux-react": "^2.6.6",
-    "react": "^0.13.3"
+    "react": "^0.13.3",
+    "react-dom": "^0.14.3",
+    "react-facebook-login": "^2.0.1"
   }
 }
