@@ -1,7 +1,11 @@
 
 
-[ ] thank you page
-[ ] facebook login
-[ ] show workouts page
-[ ] styling
+
+[ ] add list of workouts page
+[ ] style list of workouts page
+[ ] add facebook login
+
+[ ] style survey
+[ ] style thank you page
+
 

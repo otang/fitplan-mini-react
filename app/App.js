@@ -5,13 +5,16 @@ var actions = require('./actions.js');
 
 var Questionnaire = require('./Questionnaire.js');
 var ThankYou = require('./ThankYou.js');
+var Results = require('./Results.js');
 
 
 
 var App = React.createClass({
   getInitialState: function () {
     return {
-      page: "questionnaire"
+      // page: "questionnaire"
+      // page: "thank_you"
+      page: "results"
     };
   },
 
@@ -29,9 +32,19 @@ var App = React.createClass({
           <Questionnaire onComplete={this.handleSurveyComplete}></Questionnaire>
         );
         break;
-      default:
+      case "thank_you":
         return (
           <ThankYou></ThankYou>
+        );
+        break;
+      case "results":
+        return (
+          <Results></Results>
+        );
+        break;
+      default:
+        return (
+          <p>404 Page not found</p>
         );
     }
 	}
