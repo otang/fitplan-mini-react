@@ -1,15 +1,5 @@
 [
   {
-    "title": "How much fat do you want to lose?",
-    "type": "slider",
-    "options": {
-      "min": 0,
-      "max": 4,
-      "min_label": "A Little",
-      "max_label": "A Lot"
-    }
-  },
-  {
     "title": "Choose Your Gender",
     "type": "multiple_choice",
     "choices": [

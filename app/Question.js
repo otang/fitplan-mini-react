@@ -6,7 +6,6 @@ var actions = require('./actions.js');
 var MultipleChoiceQuestion = require('./MultipleChoiceQuestion.js');
 var NumberQuestion = require('./NumberQuestion.js');
 var HeightQuestion = require('./HeightQuestion.js');
-var SliderQuestion = require('./HeightQuestion.js');
 
 
 var Question = React.createClass({
@@ -26,11 +25,6 @@ var Question = React.createClass({
       case "height":
         return (
           <HeightQuestion {...this.props}></HeightQuestion>
-        )
-        break;
-      case "slider":
-        return (
-          <SliderQuestion {...this.props}></SliderQuestion>
         )
         break;
       default:
