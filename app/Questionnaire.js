@@ -62,7 +62,7 @@ var Questionnaire = React.createClass({
         break;
       case "number":
         return (
-          <NumberQuestion key={index} onAnswerQuestion={this.handleAnswerQuestion} question={question}></NumberQuestion>
+          <NumberQuestion key={index} value={this.state.answers[index]} onAnswerQuestion={this.handleAnswerQuestion} question={question}></NumberQuestion>
         )
         break;
       default:
