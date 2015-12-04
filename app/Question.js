@@ -6,6 +6,7 @@ var actions = require('./actions.js');
 var MultipleChoiceQuestion = require('./MultipleChoiceQuestion.js');
 var NumberQuestion = require('./NumberQuestion.js');
 var HeightQuestion = require('./HeightQuestion.js');
+var SliderQuestion = require('./HeightQuestion.js');
 
 
 var Question = React.createClass({
@@ -14,22 +15,27 @@ var Question = React.createClass({
     switch(this.props.question.type) {
       case "multiple_choice":
         return (
-          <MultipleChoiceQuestion value={this.props.value} onAnswerQuestion={this.props.onAnswerQuestion} question={this.props.question}></MultipleChoiceQuestion>
+          <MultipleChoiceQuestion {...this.props}></MultipleChoiceQuestion>
         )
         break;
       case "number":
         return (
-          <NumberQuestion value={this.props.value} onAnswerQuestion={this.props.onAnswerQuestion} question={this.props.question}></NumberQuestion>
+          <NumberQuestion {...this.props}></NumberQuestion>
         )
         break;
       case "height":
         return (
-          <HeightQuestion value={this.props.value} onAnswerQuestion={this.props.onAnswerQuestion} question={this.props.question}></HeightQuestion>
+          <HeightQuestion {...this.props}></HeightQuestion>
+        )
+        break;
+      case "slider":
+        return (
+          <SliderQuestion {...this.props}></SliderQuestion>
         )
         break;
       default:
         return (
-          <div className="question" value={this.props.value} onAnswerQuestion={this.props.onAnswerQuestion} question={this.props.question}>{question.title}</div>
+          <p>Error: unknown question type</p>
         );
     }
 	}

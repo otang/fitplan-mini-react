@@ -27,6 +27,7 @@ var HeightQuestion = React.createClass({
 
   handleSubmit: function(e) {
     e.preventDefault();
+    if( !this.state.feet || !this.state.inches) return;
     var height = this.state.feet+"' "+this.state.inches+'"';
     this.props.onAnswerQuestion(height);
   },

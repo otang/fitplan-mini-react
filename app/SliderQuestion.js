@@ -4,7 +4,7 @@ var Store = require('./Store.js');
 var actions = require('./actions.js');
 
 
-var NumberQuestion = React.createClass({
+var SliderQuestion = React.createClass({
   getInitialState: function () {
     return {
       value: this.props.value
@@ -35,4 +35,4 @@ var NumberQuestion = React.createClass({
 });
 
 
-module.exports = NumberQuestion;
+module.exports = SliderQuestion;
