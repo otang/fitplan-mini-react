@@ -5,13 +5,29 @@ var actions = require('./actions.js');
 var MultipleChoiceQuestionChoice = require('./MultipleChoiceQuestionChoice.js');
 
 var MultipleChoiceQuestion = React.createClass({
+  getInitialState: function () {
+    var state = {selectedChoice: null}
+      , _this = this;
+    this.props.question.choices.forEach(function(choice) {
+      if(_this.props.value === choice.value) {
+        state.selectedChoice = choice;
+      }
+    });
+    return state;
+  },
   handleSelectChoice: function(selectedChoice) {
+    this.setState({selectedChoice: selectedChoice});
     this.props.onAnswerQuestion(selectedChoice.value);
   },
+  _isSelected: function(choice) {
+    if( !this.state.selectedChoice) return false;
+    if(choice.value === this.state.selectedChoice.value) return true;
+  },
   renderChoice: function(choice, index) {
+    var className = this._isSelected(choice) ? 'selected' : '';
     return (
-      <li key={index}>
-        <MultipleChoiceQuestionChoice onSelectChoice={this.handleSelectChoice} choice={choice} choices={this.props.question.choices}></MultipleChoiceQuestionChoice>
+      <li className={className} key={index}>
+        <MultipleChoiceQuestionChoice onSelectChoice={this.handleSelectChoice} choice={choice}></MultipleChoiceQuestionChoice>
       </li>
     );
   },

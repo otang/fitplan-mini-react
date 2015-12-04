@@ -57,7 +57,7 @@ var Questionnaire = React.createClass({
     switch(question.type) {
       case "multiple_choice":
         return (
-          <MultipleChoiceQuestion key={index} onAnswerQuestion={this.handleAnswerQuestion} question={question}></MultipleChoiceQuestion>
+          <MultipleChoiceQuestion key={index} value={this.state.answers[index]} onAnswerQuestion={this.handleAnswerQuestion} question={question}></MultipleChoiceQuestion>
         )
         break;
       case "number":
@@ -67,7 +67,7 @@ var Questionnaire = React.createClass({
         break;
       default:
         return (
-          <div className="question" key={index} onAnswerQuestion={this.handleAnswerQuestion}>{question.title}</div>
+          <div className="question" key={index} value={this.state.answers[index]} onAnswerQuestion={this.handleAnswerQuestion}>{question.title}</div>
         );
     }
   },

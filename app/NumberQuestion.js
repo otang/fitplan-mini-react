@@ -13,7 +13,6 @@ var NumberQuestion = React.createClass({
 
   handleSubmit: function(e) {
     e.preventDefault();
-
     this.props.onAnswerQuestion(this.state.value);
   },
 
