@@ -3,9 +3,9 @@ var Store = require('./Store.js');
 var actions = require('./actions.js');
 
 var ProgressBar = require('./ProgressBar.js');
-var MultipleChoiceQuestion = require('./MultipleChoiceQuestion.js');
-var NumberQuestion = require('./NumberQuestion.js');
-var HeightQuestion = require('./HeightQuestion.js');
+
+var Question = require('./Question.js');
+
 
 
 
@@ -32,7 +32,6 @@ var Questionnaire = React.createClass({
   },
 
 
-
   // addMessage: function (event) {
   //   event.preventDefault();
   //   var input = this.refs.newMessage.getDOMNode();
@@ -55,27 +54,9 @@ var Questionnaire = React.createClass({
 
   renderQuestion: function (question, index) {
     if(index !== this.state.currentQuestion) return;
-    switch(question.type) {
-      case "multiple_choice":
-        return (
-          <MultipleChoiceQuestion key={index} value={this.state.answers[index]} onAnswerQuestion={this.handleAnswerQuestion} question={question}></MultipleChoiceQuestion>
-        )
-        break;
-      case "number":
-        return (
-          <NumberQuestion key={index} value={this.state.answers[index]} onAnswerQuestion={this.handleAnswerQuestion} question={question}></NumberQuestion>
-        )
-        break;
-      case "height":
-        return (
-          <HeightQuestion key={index} value={this.state.answers[index]} onAnswerQuestion={this.handleAnswerQuestion} question={question}></HeightQuestion>
-        )
-        break;
-      default:
-        return (
-          <div className="question" key={index} value={this.state.answers[index]} onAnswerQuestion={this.handleAnswerQuestion}>{question.title}</div>
-        );
-    }
+    return (
+      <Question key={index} value={this.state.answers[index]} onAnswerQuestion={this.handleAnswerQuestion} question={question}></Question>
+    );
   },
 
   handleClickBackButton: function(e) {
