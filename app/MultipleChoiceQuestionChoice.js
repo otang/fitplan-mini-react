@@ -1,7 +1,5 @@
 
 var React = require('react');
-var Store = require('./Store.js');
-var actions = require('./actions.js');
 
 
 var MultipleChoiceQuestionChoice = React.createClass({

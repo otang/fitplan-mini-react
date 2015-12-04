@@ -3,9 +3,7 @@ var Store = require('./Store.js');
 var actions = require('./actions.js');
 
 var ProgressBar = require('./ProgressBar.js');
-
 var Question = require('./Question.js');
-
 
 
 
@@ -49,7 +47,15 @@ var Questionnaire = React.createClass({
 
   handleAnswerQuestion: function(answer) {
     actions.answerQuestion(answer);
-    actions.nextQuestion();
+
+    if(this.state.currentQuestion >= this.state.questions.length - 1) {
+      // this.props.onComplete(this.state.answers);
+      Store.setPage('tanks');
+
+    } else {
+      actions.nextQuestion();
+    }
+
   },
 
   renderQuestion: function (question, index) {

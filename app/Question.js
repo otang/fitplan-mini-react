@@ -1,7 +1,5 @@
 
 var React = require('react');
-var Store = require('./Store.js');
-var actions = require('./actions.js');
 
 var MultipleChoiceQuestion = require('./MultipleChoiceQuestion.js');
 var NumberQuestion = require('./NumberQuestion.js');
