@@ -7,5 +7,6 @@
 [ ] style list of workouts page
 [ ] style survey
 [ ] style thank you page
+[x] remove livereaload from production branch
 
 
