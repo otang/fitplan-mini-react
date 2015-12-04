@@ -1,5 +1,6 @@
 var flux = require('flux-react');
 var actions = require('./actions.js');
+var questions = require('./questions.json');
 
 module.exports = flux.createStore({
   messages: [],

@@ -1,0 +1,37 @@
+[
+  {
+    "question": "Choose Your Gender",
+    "type": "multiple_choice",
+    "choices": [
+      {"name": "Male", "image": "/images/xxx.jpg"},
+      {"name": "Female", "image": "/images/xxx.jpg"}
+    ]
+  },
+  {
+    "question": "What is Your Age?",
+    "type": "number"
+  },
+  {
+    "question": "What is Your Height?",
+    "type": "height"
+  },
+  {
+    "question": "Choose Your Main Goal",
+    "type": "multiple_choice",
+    "choices": [
+      {"name": "Build Muscle", "image": "/images/xxx.jpg"},
+      {"name": "Lose Fat", "image": "/images/xxx.jpg"},
+      {"name": "Transform", "image": "/images/xxx.jpg"}
+    ]
+  },
+  {
+    "question": "How much fat do you want to lose?",
+    "type": "slider",
+    "options": {
+      "min": 0,
+      "max": 4,
+      "min_label": "A Little",
+      "max_label": "A Lot"
+    }
+  }
+]
