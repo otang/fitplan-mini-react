@@ -2,9 +2,9 @@
 var React = require('react');
 var Store = require('./Store.js');
 var actions = require('./actions.js');
-var MultipleChoiceQuestionChoice = require('./MultipleChoiceQuestionChoice.js');
 
-var MultipleChoiceQuestion = React.createClass({
+
+var NumberQuestion = React.createClass({
   renderChoice: function(choice, index) {
     return (
       <li key={index}>
@@ -17,13 +17,11 @@ var MultipleChoiceQuestion = React.createClass({
 		return (
       <div className="question">
         <h3>{this.props.question.title}</h3>
-  			<ul>
-          {this.props.question.choices.map(this.renderChoice)}
-        </ul>
+        <input name="xxx" value={this.props.value} />
       </div>
 		);
 	}
 });
 
 
-module.exports = MultipleChoiceQuestion;
+module.exports = NumberQuestion;

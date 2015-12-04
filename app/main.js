@@ -1,3 +1,3 @@
 var React = require('react');
-var App = require('./App.js');
-React.render(<App/>, document.body);
+var Questionnaire = require('./Questionnaire.js');
+React.render(<Questionnaire/>, document.getElementById('questionnaire'));

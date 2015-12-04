@@ -7,7 +7,10 @@ module.exports = flux.createStore({
   currentQuestion: 0,
   questions: questions,
   actions: [
-    actions.answerQuestion
+    actions.answerQuestion,
+    actions.reset,
+    actions.previousQuestion,
+    actions.nextQuestion
   ],
   answerQuestion: function(value) {
     console.log('Answering question #'+this.currentQuestion+': '+value);

@@ -1,10 +1,14 @@
 var React = require('react');
 var Store = require('./Store.js');
 var actions = require('./actions.js');
+
+var ProgressBar = require('./ProgressBar.js');
 var MultipleChoiceQuestion = require('./MultipleChoiceQuestion.js');
+var NumberQuestion = require('./NumberQuestion.js');
 
 
-var App = React.createClass({
+
+var Questionnaire = React.createClass({
   getInitialState: function () {
     return {
       questions: Store.getQuestions(),
@@ -44,9 +48,8 @@ var App = React.createClass({
 
 
   handleAnswerQuestion: function(answer) {
-    alert('App.js: answerQuestion: '+answer);
-    // console.log(answer);
-
+    actions.answerQuestion(answer);
+    actions.nextQuestion();
   },
 
   renderQuestion: function (question, index) {
@@ -55,6 +58,11 @@ var App = React.createClass({
       case "multiple_choice":
         return (
           <MultipleChoiceQuestion key={index} onAnswerQuestion={this.handleAnswerQuestion} question={question}></MultipleChoiceQuestion>
+        )
+        break;
+      case "number":
+        return (
+          <NumberQuestion key={index} onAnswerQuestion={this.handleAnswerQuestion} question={question}></NumberQuestion>
         )
         break;
       default:
@@ -67,10 +75,19 @@ var App = React.createClass({
 
 	render: function() {
 		return (
-      <div id="questionnaire">
+      <div>
+        <ProgressBar></ProgressBar>
+
         <div className="questions">
           {this.state.questions.map(this.renderQuestion)}
         </div>
+
+        <div style={{color: 'gray'}}>
+          <small>Answers: {JSON.stringify(this.state.answers)}</small>
+        </div>
+
+        <a className="backButton" href onClick={this.handleClickBackButton}>back</a>
+
       </div>
 		);
 	}
@@ -80,4 +97,4 @@ var App = React.createClass({
 
 
 
-module.exports = App;
+module.exports = Questionnaire;
