@@ -20,12 +20,15 @@ var ThankYou = React.createClass({
       <div className="thankYou">
         <h1>You're done!</h1>
         <p>
-          Login with Facebook now to view your recommended Fitplan.
+          Connect with Facebook now to view your top Fitplan.
         </p>
         <FacebookLogin
           appId="366102180203274"
           autoLoad={true}
-          callback={this.responseFacebook} />
+          callback={this.responseFacebook}
+          scope="public_profile, email"
+          textButton="Connect with Facebook"
+          />
       </div>
     );
 	}
