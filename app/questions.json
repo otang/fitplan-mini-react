@@ -1,5 +1,9 @@
 [
   {
+    "title": "What is Your Height?",
+    "type": "height"
+  },
+  {
     "title": "Choose Your Gender",
     "type": "multiple_choice",
     "choices": [
@@ -10,10 +14,6 @@
   {
     "title": "What is Your Age?",
     "type": "number"
-  },
-  {
-    "title": "What is Your Height?",
-    "type": "height"
   },
   {
     "title": "Choose Your Main Goal",
