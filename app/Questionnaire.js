@@ -79,10 +79,10 @@ var Questionnaire = React.createClass({
         </div>
 
         <div style={{color: 'gray'}}>
-          <small>Answers: {JSON.stringify(this.state.answers)}</small>
+          <small>Answers thus far (for demo purposes): {JSON.stringify(this.state.answers)}</small>
         </div>
 
-        <a className="backButton" href onClick={this.handleClickBackButton}>back</a>
+        <a style={{display: !this.state.currentQuestion ? 'none' : ''}} className="backButton" href onClick={this.handleClickBackButton}>back</a>
 
       </div>
 		);

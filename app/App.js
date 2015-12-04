@@ -15,7 +15,6 @@ var App = React.createClass({
       user: null,
       page: "questionnaire"
       // page: "thank_you"
-      // page: "thank_you"
     };
   },
 

@@ -1,9 +1,9 @@
 
 
-[ ] progress bar
-[ ] only show back if > 1
-[ ] style list of workouts page
+
 [ ] style survey
+[ ] style progress bar
 [ ] style thank you page
+[ ] style list of workouts page
 
 
