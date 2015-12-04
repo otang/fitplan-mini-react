@@ -3,8 +3,8 @@
     "title": "Choose Your Gender",
     "type": "multiple_choice",
     "choices": [
-      {"name": "Male", "image": "/images/xxx.jpg"},
-      {"name": "Female", "image": "/images/xxx.jpg"}
+      {"title": "Male", "image": "/images/xxx.jpg"},
+      {"title": "Female", "image": "/images/xxx.jpg"}
     ]
   },
   {
@@ -19,9 +19,9 @@
     "title": "Choose Your Main Goal",
     "type": "multiple_choice",
     "choices": [
-      {"name": "Build Muscle", "image": "/images/xxx.jpg"},
-      {"name": "Lose Fat", "image": "/images/xxx.jpg"},
-      {"name": "Transform", "image": "/images/xxx.jpg"}
+      {"title": "Build Muscle", "image": "/images/xxx.jpg"},
+      {"title": "Lose Fat", "image": "/images/xxx.jpg"},
+      {"title": "Transform", "image": "/images/xxx.jpg"}
     ]
   },
   {

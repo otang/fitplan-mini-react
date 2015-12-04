@@ -7,7 +7,8 @@ var App = React.createClass({
   getInitialState: function () {
     return {
       questions: Store.getQuestions(),
-      answers: Store.getAnswers()
+      answers: Store.getAnswers(),
+      currentQuestion: Store.getCurrentQuestion()
     };
   },
   componentWillMount: function () {
@@ -19,7 +20,8 @@ var App = React.createClass({
   changeState: function () {
     this.setState({
       questions: Store.getQuestions(),
-      answers: Store.getAnswers()
+      answers: Store.getAnswers(),
+      currentQuestion: Store.getCurrentQuestion()
     });
   },
 
@@ -38,16 +40,17 @@ var App = React.createClass({
   //     newMessage: event.target.value
   //   });
   // },
-  renderQuestion: function (question) {
+  renderQuestion: function (question, index) {
+    if(index !== this.state.currentQuestion) return;
     switch(question.type) {
       case "multiple_choice":
         return (
-          <MultipleChoiceQuestion question={question}></MultipleChoiceQuestion>
+          <MultipleChoiceQuestion key={index} question={question}></MultipleChoiceQuestion>
         )
         break;
       default:
         return (
-          <div className="question">{question.title}</div>
+          <div className="question" key={index}>{question.title}</div>
         );
     }
   },

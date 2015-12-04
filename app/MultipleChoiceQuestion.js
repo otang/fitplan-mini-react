@@ -44,26 +44,21 @@ var MultipleChoiceQuestion = React.createClass({
   //     newMessage: event.target.value
   //   });
   // },
-  // renderQuestion: function (question) {
-  //   switch(question.type) {
-  //     case "multiple_choice":
-  //       return (
-  //         <Question question={question}></Question>
-  //       )
-  //       break;
-  //     default:
-  //       return (
-  //         <div>{question.title}</div>
-  //       );
-  //   }
-  // },
+  renderChoice: function(choice, index) {
+    return (
+      <li key={index}>
+        <img src="http://artifacts.bbcomcdn.com/cms-app/1.2.2/i/7ad1f61566b532c742fc4f59fc99bdca25309815.jpg" />
+        {choice.title}
+      </li>
+    );
+  },
 
 
 	render: function() {
 		return (
-			<span>
-        Multiple choice: {this.props.question.title}
-      </span>
+			<ul>
+        {this.props.question.choices.map(this.renderChoice)}
+      </ul>
 		);
 	}
 

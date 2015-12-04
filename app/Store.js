@@ -36,5 +36,8 @@ module.exports = flux.createStore({
     getQuestions: function () {
       return this.questions;
     },
+    getCurrentQuestion: function () {
+      return this.currentQuestion;
+    },
   }
 });
