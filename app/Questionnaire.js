@@ -5,6 +5,7 @@ var actions = require('./actions.js');
 var ProgressBar = require('./ProgressBar.js');
 var MultipleChoiceQuestion = require('./MultipleChoiceQuestion.js');
 var NumberQuestion = require('./NumberQuestion.js');
+var HeightQuestion = require('./HeightQuestion.js');
 
 
 
@@ -63,6 +64,11 @@ var Questionnaire = React.createClass({
       case "number":
         return (
           <NumberQuestion key={index} value={this.state.answers[index]} onAnswerQuestion={this.handleAnswerQuestion} question={question}></NumberQuestion>
+        )
+        break;
+      case "height":
+        return (
+          <HeightQuestion key={index} value={this.state.answers[index]} onAnswerQuestion={this.handleAnswerQuestion} question={question}></HeightQuestion>
         )
         break;
       default:
