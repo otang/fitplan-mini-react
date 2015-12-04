@@ -5,10 +5,13 @@ var actions = require('./actions.js');
 var MultipleChoiceQuestionChoice = require('./MultipleChoiceQuestionChoice.js');
 
 var MultipleChoiceQuestion = React.createClass({
+  handleSelectChoice: function(selectedChoice) {
+    this.props.onAnswerQuestion(selectedChoice.value);
+  },
   renderChoice: function(choice, index) {
     return (
       <li key={index}>
-        <MultipleChoiceQuestionChoice onSelectChoice={this.props.onAnswerQuestion} choice={choice}></MultipleChoiceQuestionChoice>
+        <MultipleChoiceQuestionChoice onSelectChoice={this.handleSelectChoice} choice={choice} choices={this.props.question.choices}></MultipleChoiceQuestionChoice>
       </li>
     );
   },
