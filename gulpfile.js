@@ -126,12 +126,12 @@ var browserifyTask = function (options) {
 var cssTask = function (options) {
     if (options.development) {
       var run = function () {
-        console.log(arguments);
         var start = new Date();
         console.log('Building CSS bundle');
         gulp.src(options.src)
           .pipe(concat('main.css'))
           .pipe(gulp.dest(options.dest))
+          .pipe(gulpif(options.development, livereload({start:true})))
           .pipe(notify(function () {
             console.log('CSS bundle built in ' + (Date.now() - start) + 'ms');
           }));

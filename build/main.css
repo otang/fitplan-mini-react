@@ -1,7 +1,110 @@
+
+body, html {
+  padding: 0; margin:0;
+
+
+}
 body {
-	background-color: #EAEAEA;
+  background: #EAEAEA;
+  font-family: 'Open Sans', sans-serif;
+  color: #676767;
 }
 
-li.selected {
-  background: yellow;
+a {
+  text-decoration: none;
 }
+
+header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #EBEBEB;
+}
+
+#logo {
+  text-align: center;
+  display: block;
+  padding: 8px 15px;
+}
+
+#logo img {
+  width: 90px;
+}
+
+h1,h2,h3,h4 {
+  font-family: Oswald;
+  text-transform: uppercase;
+}
+
+#questionnaire {
+  background: white;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin: 30px auto;
+  max-width: 500px;
+  border-radius: 8px;
+  position: relative;
+  /*min-height: 180px;*/
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.question li img {
+  max-width: 100%;
+}
+
+#questionnaire h3 {
+  text-align: center;
+  margin: 20px 0 25px 0;
+}
+
+.progressBar {
+/*  position: absolute;
+  top: 12px;
+  right: 12px;*/
+  float: right;
+}
+
+.backButton {
+  float: left;
+  color: #33B1EF;
+  font-size: 13px;
+}
+
+.muted {
+  text-align: center;
+  font-size: 12px;
+  display: block;
+  color: #ccc;
+}
+
+ul.multipleChoice li {
+  display: inline-block;
+  width: 130px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.button {
+  color: #fff;
+  text-decoration: none;
+  background-color: #009ad2;
+  height: auto;
+  text-align: center;
+  display: inline-block;
+  border-radius: 2px;
+  text-transform: uppercase;
+  line-height: 30px;
+  border: 1px solid #00aeef;
+  font-size: 13px;
+  width: 100%;
+}
+
+/*li.selected .button,*/
+li:hover .button {
+  background: #56d823;
+  border: 1px solid #53ce22;
+
+}
+
+
+
+

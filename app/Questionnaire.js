@@ -72,18 +72,18 @@ var Questionnaire = React.createClass({
 	render: function() {
 		return (
       <div>
-        <ProgressBar currentQuestion={this.state.currentQuestion} totalQuestions={this.state.questions.length}></ProgressBar>
+        <div id="questionnaire">
+          <a style={{display: !this.state.currentQuestion ? 'none' : ''}} className="backButton" href onClick={this.handleClickBackButton}>&lt; Back</a>
+          <ProgressBar currentQuestion={this.state.currentQuestion} totalQuestions={this.state.questions.length}></ProgressBar>
 
-        <div className="questions">
-          {this.state.questions.map(this.renderQuestion)}
+          <div className="questions">
+            {this.state.questions.map(this.renderQuestion)}
+          </div>
         </div>
 
-        <div style={{color: 'gray'}}>
-          <small>Answers thus far (for demo purposes): {JSON.stringify(this.state.answers)}</small>
-        </div>
-
-        <a style={{display: !this.state.currentQuestion ? 'none' : ''}} className="backButton" href onClick={this.handleClickBackButton}>back</a>
-
+        <small className="muted">
+          For demo - your answers so far: {JSON.stringify(this.state.answers)}
+        </small>
       </div>
 		);
 	}

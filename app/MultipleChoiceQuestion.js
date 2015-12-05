@@ -34,7 +34,7 @@ var MultipleChoiceQuestion = React.createClass({
 		return (
       <div className="question">
         <h3>{this.props.question.title}</h3>
-  			<ul>
+  			<ul className="multipleChoice">
           {this.props.question.choices.map(this.renderChoice)}
         </ul>
       </div>

@@ -12,7 +12,7 @@ var MultipleChoiceQuestionChoice = React.createClass({
 		return (
       <div onClick={this.handleClick}>
         <img src={this.props.choice.image} />
-        {this.props.choice.title}
+        <div className="button">{this.props.choice.title}</div>
       </div>
 		);
 	}

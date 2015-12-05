@@ -5,7 +5,7 @@ var ProgressBar = React.createClass({
 
 	render: function() {
 		return (
-      <span>{this.props.currentQuestion+1} / {this.props.totalQuestions}</span>
+      <div className="progressBar">{this.props.currentQuestion+1} / {this.props.totalQuestions}</div>
 		);
 	}
 
