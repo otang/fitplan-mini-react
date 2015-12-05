@@ -110,7 +110,7 @@ ul.progressBar li {
   display: inline-block;
   width: 24px;
   height: 8px;
-  background: url(/images/progress-sprite.png) 0 0 no-repeat;
+  background: url(../images/progress-sprite.png) 0 0 no-repeat;
   overflow: hidden;
 }
 
