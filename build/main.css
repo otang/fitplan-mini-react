@@ -72,7 +72,7 @@ h1,h2,h3,h4 {
 ul.multipleChoice li {
   display: inline-block;
   width: 130px;
-  margin: 0 10px;
+  margin: 0 10px 10px 0;
   cursor: pointer;
 }
 
@@ -93,9 +93,7 @@ ul.multipleChoice li {
 
 /*li.selected .button,*/
 li:hover .button {
-  background: #56d823;
-  border: 1px solid #53ce22;
-
+  background: #0385b4;
 }
 
 

@@ -1,9 +1,13 @@
 
 
 
-[ ] style survey
-[ ] style progress bar
-[ ] style thank you page
-[ ] style list of workouts page
+[ ] style survey - 1 hr
+[x] style progress bar
+[ ] style thank you page - 1 hr
+[ ] style list of workouts page - 1hr
+[ ] separate female images
+[ ] update image content
+
+goal: 10hours (+2.5hrs)
 
 

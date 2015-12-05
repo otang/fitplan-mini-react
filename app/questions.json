@@ -3,8 +3,8 @@
     "title": "Choose Your Gender",
     "type": "multiple_choice",
     "choices": [
-      {"title": "Male", "image": "http://artifacts.bbcomcdn.com/cms-app/1.2.2/i/7ad1f61566b532c742fc4f59fc99bdca25309815.jpg", "value": "male"},
-      {"title": "Female", "image": "http://artifacts.bbcomcdn.com/cms-app/1.2.2/i/7ad1f61566b532c742fc4f59fc99bdca25309815.jpg", "value": "female"}
+      {"title": "Male", "image": "images/sex_male.jpg", "value": "male"},
+      {"title": "Female", "image": "images/sex_female.jpg", "value": "female"}
     ]
   },
   {
@@ -19,9 +19,48 @@
     "title": "Choose Your Main Goal",
     "type": "multiple_choice",
     "choices": [
-      {"title": "Build Muscle", "image": "http://artifacts.bbcomcdn.com/cms-app/1.2.2/i/7ad1f61566b532c742fc4f59fc99bdca25309815.jpg", "value": "build_muscle"},
-      {"title": "Lose Fat", "image": "http://artifacts.bbcomcdn.com/cms-app/1.2.2/i/7ad1f61566b532c742fc4f59fc99bdca25309815.jpg", "value": "lose_fat"},
-      {"title": "Transform", "image": "http://artifacts.bbcomcdn.com/cms-app/1.2.2/i/7ad1f61566b532c742fc4f59fc99bdca25309815.jpg", "value": "transform"}
+      {
+        "title": "Build Muscle",
+        "value": "build_muscle",
+        "male_image": "images/male_muscle_building.jpg",
+        "female_image": "images/female_muscle_building.jpg"
+      },
+      {
+        "title": "Lose Fat",
+        "value": "lose_fat",
+        "male_image": "images/male_fat_loss.jpg",
+        "female_image": "images/female_fat_loss.jpg"
+      },
+      {
+        "title": "Transform",
+        "value": "transform",
+        "male_image": "images/male_transform.jpg",
+        "female_image": "images/female_transform.jpg"
+      }
+    ]
+  },
+  {
+    "title": "How Experienced Are You?",
+    "type": "multiple_choice",
+    "choices": [
+      {
+        "title": "Beginner",
+        "value": "beginner",
+        "male_image": "images/male_beginner.jpg",
+        "female_image": "images/female_beginner.jpg"
+      },
+      {
+        "title": "Intermediate",
+        "value": "intermediate",
+        "male_image": "images/male_intermediate.jpg",
+        "female_image": "images/female_intermediate.jpg"
+      },
+      {
+        "title": "Advanced",
+        "value": "advanced",
+        "male_image": "images/male_advanced.jpg",
+        "female_image": "images/female_advanced.jpg"
+      }
     ]
   }
 ]
