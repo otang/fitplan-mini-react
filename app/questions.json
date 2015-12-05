@@ -1,17 +1,18 @@
 [
 
   {
-    "title": "What is Your Age?",
-    "type": "number",
-    "label": "Years"
-  },
-  {
     "title": "Choose Your Gender",
     "type": "multiple_choice",
     "choices": [
       {"title": "Male", "image": "images/sex_male.jpg", "value": "male"},
       {"title": "Female", "image": "images/sex_female.jpg", "value": "female"}
     ]
+  },
+
+  {
+    "title": "What is Your Age?",
+    "type": "number",
+    "label": "Years"
   },
 
   // {
