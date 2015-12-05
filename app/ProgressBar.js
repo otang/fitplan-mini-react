@@ -1,12 +1,26 @@
 var React = require('react');
 
 
+
+
+
+
 var ProgressBar = React.createClass({
+  renderSegment: function (index) {
+    var className = index <= this.props.currentQuestion ? 'complete' : '';
+    return (
+      <li className={className} key={index}>{index}</li>
+    );
+  },
 
 	render: function() {
-		return (
-      <div className="progressBar">{this.props.currentQuestion+1} / {this.props.totalQuestions}</div>
-		);
+    var segments = [];
+    for(var i = 0; i < this.props.totalQuestions; i++) {
+      segments.push(this.renderSegment(i));
+    }
+    return (
+       <ul className="progressBar">{segments}</ul>
+    );
 	}
 
 });
