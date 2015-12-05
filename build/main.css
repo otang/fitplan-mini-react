@@ -56,13 +56,6 @@ h1,h2,h3,h4 {
   margin: 20px 0 25px 0;
 }
 
-.progressBar {
-/*  position: absolute;
-  top: 12px;
-  right: 12px;*/
-  float: right;
-}
-
 .backButton {
   float: left;
   color: #33B1EF;
@@ -105,6 +98,35 @@ li:hover .button {
 
 }
 
+
+/**
+ * Progress bar
+ */
+
+.progressBar {
+  float: right;
+}
+
+ul.progressBar li {
+  display: inline-block;
+  width: 24px;
+  height: 8px;
+  background: url(/images/progress-sprite.png) 0 0 no-repeat;
+  overflow: hidden;
+}
+
+ul.progressBar li.complete {
+  background-position: 0 -8px;
+}
+
+ul.progressBar li:nth-of-type(1) {
+  width: 8px;
+  background-position: top right!important;
+}
+
+ul.progressBar li.complete:nth-of-type(1) {
+  background-position: right -8px !important;
+}
 
 
 

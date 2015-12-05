@@ -9,7 +9,7 @@ var ProgressBar = React.createClass({
   renderSegment: function (index) {
     var className = index <= this.props.currentQuestion ? 'complete' : '';
     return (
-      <li className={className} key={index}>{index}</li>
+      <li className={className} key={index}></li>
     );
   },
 
