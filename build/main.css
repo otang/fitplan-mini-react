@@ -47,6 +47,26 @@ h1,h2,h3,h4 {
   padding-bottom: 30px;
 }
 
+.numberQuestion {
+  width: 160px;
+  border: 1px solid #C8C8C8;
+  background-color: #F4F4F4;
+  min-height: 100px;
+  border-radius: 3px;
+  margin: 10px auto;
+}
+
+.numberQuestion .button {
+  margin: 10px 0 0 0;
+}
+
+.question label {
+  font-size: 14px;
+  text-transform: uppercase;
+  display: block;
+  margin: 8px 0;
+}
+
 .question li img {
   max-width: 100%;
 }
@@ -89,6 +109,7 @@ ul.multipleChoice li {
   border: 1px solid #00aeef;
   font-size: 13px;
   width: 100%;
+  cursor: pointer;
 }
 
 /*li.selected .button,*/

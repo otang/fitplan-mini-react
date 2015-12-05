@@ -21,11 +21,12 @@ var NumberQuestion = React.createClass({
 
 	render: function() {
 		return (
-      <div className="question">
+      <div className="question numberQuestion">
         <h3>{this.props.question.title}</h3>
         <form onSubmit={this.handleSubmit}>
           <input name="number" onChange={this.handleValueChange} value={this.state.value} />
-          <input type="submit" value="Next" />
+          <label for="number">{this.props.question.label}</label>
+          <input className="button"  type="submit" value="Continue" />
         </form>
       </div>
 		);
