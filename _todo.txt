@@ -6,7 +6,7 @@
 [x] separate female images
 [x] update image content
 [x] style thank you page - 1 hr
-[ ] style list of workouts page - 1hr
+[x] style list of workouts page - 1hr
 
 goal: 10hours (+2.5hrs)
 
