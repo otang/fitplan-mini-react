@@ -158,5 +158,29 @@ ul.progressBar li.complete:nth-of-type(1) {
   background-position: right -8px !important;
 }
 
+.contentWrapper {
+  background: white;
+  padding: 30px 12px;
+  border: 1px solid #ccc;
+  margin: 30px auto;
+  max-width: 500px;
+  border-radius: 8px;
+  position: relative;
+  /*min-height: 180px;*/
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.contentWrapper h1 {
+  font-family: Oswald;
+  font-size: 24px;
+  text-transform: uppercase;
+  line-height: 1.4em;
+  margin: 0 0 20px 0;
+}
+
+.contentWrapper p {
+  margin: 0 0 15px 0;
+}
 
 

@@ -13,8 +13,9 @@ var App = React.createClass({
   getInitialState: function () {
     return {
       user: null,
-      page: "questionnaire"
+      // page: "questionnaire"
       // page: "thank_you"
+      page: "results"
     };
   },
 

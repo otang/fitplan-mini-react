@@ -28,23 +28,24 @@ var ThankYou = React.createClass({
 	render: function() {
 
     return (
-      <div className="thankYou">
-        <h1>You're done!</h1>
-        <div style={{display: this.state.user ? 'none' : ''}}>
-          <p>
-            Connect with Facebook now to view your top Fitplan.
-          </p>
-          <FacebookLogin
-            appId="366102180203274"
-            autoLoad={true}
-            callback={this.responseFacebook}
-            scope="public_profile, email"
-            textButton="Connect with Facebook"
-            />
-        </div>
+      <div className="contentWrapper">
+        <div className="thankYou">
+          <h1>You're done!</h1>
+          <div style={{display: this.state.user ? 'none' : ''}}>
+            <p>
+              Connect with Facebook now to view your top Fitplan.
+            </p>
+            <FacebookLogin
+              appId="366102180203274"
+              callback={this.responseFacebook}
+              scope="public_profile, email"
+              textButton="Connect with Facebook"
+              />
+          </div>
 
-        <div style={{display: this.state.user ? '' : 'none'}}>
-          <a href onClick={this.viewResultsClicked}>View Your Results Now</a>
+          <div style={{display: this.state.user ? '' : 'none', width: "230px", margin: "0px auto"}}>
+            <a href className="button" onClick={this.viewResultsClicked}>View Your Results Now <i className="fa fa-arrow-right"></i></a>
+          </div>
         </div>
       </div>
     );
